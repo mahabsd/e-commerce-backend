@@ -11,7 +11,7 @@ var transporter = nodemailer.createTransport("SMTP", {
     service: "Gmail",
     auth: {
         user: 'mahabsd@gmail.com',
-        pass: 'Mahmouhaa-28'
+        pass: '****'
     }
 });
 
@@ -21,10 +21,10 @@ router.post('/send', function (req, res) {
         // setup e-mail data with unicode symbols
         var mailOptions = {
             from: 'mahabsd@gmail.com',
-            to: 'benayedghaith0000@gmail.com',
-            // subject: req.body.subject, // Subject line
-            // text: req.body.text, // plaintext body
-            html: '<b>Hello world 🐴</b>' // html body
+            to: req.body.email,
+            subject: '', // Subject line
+
+            html: '<b> "votre session à été crée avec succée, pour vous connecter allez sur" + http://127.0.0.1:3000</b>' // html body 
         };
         transporter.sendMail(mailOptions, function (error, info) {
             if (error) {
