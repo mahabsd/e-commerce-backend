@@ -22,7 +22,7 @@ var fournisseurSchema = new schema({
         type: String
     },
     userFournisseur :   [{ type: mongoose.Schema.Types.ObjectId, ref: 'user' }],
-
+    favourite: false,
 
 })
 

@@ -22,6 +22,7 @@ var clientSchema = new schema({
         type: String
     },
     userClient :   [{ type: mongoose.Schema.Types.ObjectId, ref: 'user' }],
+    favourite: false,
 })
 
 module.exports = mongoose.model("client", clientSchema)
